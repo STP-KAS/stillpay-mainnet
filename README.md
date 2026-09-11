@@ -9,6 +9,8 @@ npm test
 npm run serve
 ```
 
+GitHub Actions is **not** wired. Template: `docs/github-action-test.yml`.
+
 http://127.0.0.1:8772/ — binds loopback. Addresses must be `kaspa:`. `kaspatest:` is refused.
 
 ## What is built (and what is not)

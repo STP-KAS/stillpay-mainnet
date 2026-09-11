@@ -1,13 +1,12 @@
 // Local quote + HTTP 402 challenge. ENGINE_SPEC. Not x402 v2.
-// Production agents should bind elldeeone/kaspa-x402 exact/standard-native.
-// This object is what a KaChat quote and a 402 body share.
+// elldeeone/kaspa-x402 is TN10-only. This file is not that gateway.
 
 import {LOCK_TIME_THRESHOLD, MAX_SOMPI, NETWORK, PROJECT, ReceiptError} from './domain.mjs';
 
 export const QUOTE_SCHEME = `${PROJECT}-quote-v1`;
 export const CAIP2 = NETWORK === 'mainnet' ? 'kaspa:mainnet' : 'kaspa:testnet-10';
 export const X402_NOTE =
-  'Local ENGINE_SPEC only. Do not treat this as x402 v2. Bind https://github.com/elldeeone/kaspa-x402 for agents. TN10 alpha; mainnet blocked there.';
+  'Local ENGINE_SPEC only. Do not treat this as x402 v2. elldeeone/kaspa-x402 is TN10-only as of 11 Sep 2026. This repo is mainnet shape, not that rail.';
 
 const hex32 = (value, label) => {
   if (typeof value !== 'string' || !/^[0-9a-f]{64}$/i.test(value)) {
@@ -98,7 +97,7 @@ export function toX402PaymentRequired(quote) {
   return {
     doNotSend: true,
     draftMapper: true,
-    note: 'Not an x402 v2 message. Do not PUT this on the wire. Bind elldeeone/kaspa-x402.',
+    note: 'Not an x402 v2 message. Do not PUT this on the wire. This repo is not an x402 gateway.',
     wouldMapTo: {
       x402Version: 2,
       resource: {url: '/work'},
