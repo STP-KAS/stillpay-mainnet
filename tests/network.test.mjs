@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {describe, it} from 'node:test';
-import {ADDRESS_PREFIX, FORBIDDEN_PREFIX, NETWORK, ReceiptError} from '../src/domain.mjs';
+import {ADDRESS_PREFIX, FORBIDDEN_PREFIX, NETWORK, NODE_HINT, ReceiptError} from '../src/domain.mjs';
 import {assertAddress, canBroadcast, broadcastGate} from '../src/network.mjs';
 import {planBroadcast} from '../src/broadcast.mjs';
 
@@ -18,5 +18,6 @@ describe('stillpay mainnet network pin', () => {
     assert.throws(() => broadcastGate(), (err) => err instanceof ReceiptError && err.code === 'MAINNET_GATE');
     assert.equal(planBroadcast('timeout-lock', {sompi: '1'}).network, 'mainnet');
     assert.equal(planBroadcast('timeout-lock', {sompi: '1'}).submitted, false);
+    assert.equal(NODE_HINT.startsWith('wss://'), false);
   });
 });

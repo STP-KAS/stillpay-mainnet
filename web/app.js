@@ -20,7 +20,7 @@ btn.addEventListener('click', () => {
   lines.push(`oracle → ${snap.oracle}`);
   lines.push(snap.warning);
   lines.push('');
-  lines.push('ENGINE_SPEC. Not SCRIPT_ENFORCED. Parker’s TN10 pack is in artifacts/, not this click.');
+  lines.push('ENGINE_SPEC. Not SCRIPT_ENFORCED. No mainnet journal. Do not paste Testnet-10 txids here.');
   out.textContent = lines.join('\n');
 });
 
