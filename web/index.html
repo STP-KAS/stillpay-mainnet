@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>stillpay — mainnet</title>
+  <link rel="stylesheet" href="/web/style.css">
+</head>
+<body>
+  <div class="banner">MAINNET SHAPE · STILLPAY · NOT USD · DOES NOT MOVE KAS FROM THIS PAGE</div>
+  <header>
+    <p class="muted">STP-KAS / stillpay-mainnet · sister: stillpay-tn10</p>
+    <h1>Same still number, on kaspa:.</h1>
+    <p class="lead">1 unit = 1 locked sompi. Timeout claim or reclaim. This page is ENGINE_SPEC. There is no wasm submitter. <code>kaspatest:</code> is refused.</p>
+  </header>
+  <main>
+    <h2>Receipt (ENGINE_SPEC)</h2>
+    <p><button id="run" type="button">Run receipt</button></p>
+    <pre id="demo">Click. No broadcast. Cap 10 KAS until a journal exists.</pre>
+    <h2>Timeout</h2>
+    <p>
+      <button id="run-timeout-claim" type="button">Claim path</button>
+      <button id="run-timeout" type="button">Reclaim path</button>
+    </p>
+    <pre id="timeout-out">Same rules as TN10. Real KAS is not moved here.</pre>
+    <h2>Local 402 (not x402 v2)</h2>
+    <p class="muted">Unsigned. elldeeone kaspa-x402 is TN10-only as of 11 Sep 2026. Do not pretend this is a live mainnet 402 rail.</p>
+    <p><button id="run-402" type="button">Show 402 body</button></p>
+    <pre id="quote-out">stillpay-quote-v1 · caip2 kaspa:mainnet</pre>
+  </main>
+  <footer>MIT. No warranty. Default broadcast is off. Two env gates plus a real wallet before any spend.</footer>
+  <script type="module" src="/web/app.js"></script>
+</body>
+</html>
