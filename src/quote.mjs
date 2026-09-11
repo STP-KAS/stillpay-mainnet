@@ -1,10 +1,10 @@
 // Local quote + HTTP 402 challenge. ENGINE_SPEC. Not x402 v2.
 // elldeeone/kaspa-x402 is TN10-only. This file is not that gateway.
 
-import {LOCK_TIME_THRESHOLD, MAX_SOMPI, NETWORK, PROJECT, ReceiptError} from './domain.mjs';
+import {CAIP2, LOCK_TIME_THRESHOLD, MAX_SOMPI, NETWORK, PROJECT, ReceiptError} from './domain.mjs';
 
 export const QUOTE_SCHEME = `${PROJECT}-quote-v1`;
-export const CAIP2 = NETWORK === 'mainnet' ? 'kaspa:mainnet' : 'kaspa:testnet-10';
+export {CAIP2};
 export const X402_NOTE =
   'Local ENGINE_SPEC only. Do not treat this as x402 v2. elldeeone/kaspa-x402 is TN10-only as of 11 Sep 2026. This repo is mainnet shape, not that rail.';
 
@@ -78,7 +78,7 @@ export function paymentRequired(quote) {
       exp: quote.timeout,
       nonce: quote.nonce,
       postage: quote.postage,
-      quote,
+      quote: {...quote, signed: false},
     },
     x402: {
       binding: 'none-yet',
