@@ -45,3 +45,12 @@ Skipping those is how a toy becomes a loss.
 PegLab’s 2 tKAS pool **never** belongs on this repo.
 
 MIT. No warranty. Real KAS is real.
+
+---
+
+> **Standard disclaimer.** This GitHub, not the topic above.
+>
+> Intentions are good; thought process is questionable. STP remains delusional. Si vis pacem, para bellum.
+>
+> Intern at https://sixpack.wtf/  
+> X: https://x.com/StppStp · GitHub: https://github.com/STP-KAS
